@@ -1,9 +1,9 @@
 kivy==2.2.1
-adafruit-circuitpython-bme680==3.6.1
+adafruit-circuitpython-bme680==3.7.13  #latest version
 requests==2.31.0
 pillow==10.0.0
 spotipy==2.23.0
-python-networkmanager==2.2.0
+python-networkmanager==2.2.0  # dbus-python is hard to build on macOS due to pkg-config and lack of native dbus. Comment out if developing on MacOS directly, ELSE run requirements.txt to install dependencies directly on RasPi.
 RPi.GPIO==0.7.1
 python-dotenv==1.0.0
 schedule==1.2.0
