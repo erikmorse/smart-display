@@ -1,0 +1,16 @@
+[Unit]
+Description=Smart Display Application
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/opt/smartdisplay
+ExecStart=/opt/smartdisplay/venv/bin/python /opt/smartdisplay/main.py
+Restart=on-failure
+RestartSec=5
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+
+[Install]
+WantedBy=multi-user.target
